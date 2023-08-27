@@ -1,0 +1,101 @@
+<!-- <?php
+session_start();
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $_SESSION['q1'] = $_POST['q1'];
+    $_SESSION['q2'] = $_POST['q2'];
+    $_SESSION['q3'] = $_POST['q3'];
+    $_SESSION['q4'] = $_POST['q4'];
+    $_SESSION['q5'] = $_POST['q5'];
+    $_SESSION['q6'] = $_POST['q6'];
+    
+    header("Location: page3.php");
+    exit();
+}
+?> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gravitate Opinions</title>
+    <link href="https://fonts.cdnfonts.com/css/product-sans" rel="stylesheet">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/6432/6432222.png" type="image/png">
+    <link rel="stylesheet" href="page2.css">
+</head>
+<body>
+    <h1>Gravitate Opinions</h1>
+    <form method="POST" id="redirectForm">
+
+        <div class="parent">
+            <!-- Question 1 -->
+            <div class="child1" style="height:170px;">
+                <label>What piqued your interest in space exploration and astronomy?</label><br><br><br>
+                <input type="radio" name="q1" value="Personal curiosity">&emsp;Personal curiosity<br>
+                <input type="radio" name="q1" value="School/education">&emsp;School/education<br>
+                <input type="radio" name="q1" value="Popular movies/TV shows">&emsp;Popular movies/TV shows<br>
+                <input type="radio" name="q1" value="News/media coverage">&emsp;News/media coverage<br><br>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="child1" style="height:210px;">
+                <label>Do you believe that human colonization of other planets is a realistic and achievable goal in the future?</label><br><br><br>
+                <input type="radio" name="q2" value="Yes, within this century">&emsp;Yes, within this century<br>
+                <input type="radio" name="q2" value="Yes, but in the distant future">&emsp;Yes, but in the distant future<br>
+                <input type="radio" name="q2" value="No, it's not feasible">&emsp;No, it's not feasible<br>
+                <input type="radio" name="q2" value="Unsure/I don't know">&emsp;Unsure/I don't know<br><br>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="child1" style="height: 220px;">
+                <label>How often do you engage with news or information about space missions, discoveries, and advancements?</label><br><br><br>
+                <input type="radio" name="q3" value="Daily">&emsp;Daily<br>
+                <input type="radio" name="q3" value="Weekly">&emsp;Weekly<br>
+                <input type="radio" name="q3" value="Monthly">&emsp;Monthly<br>
+                <input type="radio" name="q3" value="Rarely/never">&emsp;Rarely/never<br><br>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="child1" style="height:210px;">
+                <label>Are you familiar with the concept of black holes? If so, please explain your understanding of them.</label><br><br><br>
+                <input type="radio" name="q4" value="Very familiar and can explain">&emsp;Very familiar and can explain<br>
+                <input type="radio" name="q4" value="Somewhat familiar">&emsp;Somewhat familiar<br>
+                <input type="radio" name="q4" value="Heard of but not sure about details">&emsp;Heard of but not sure about details<br>
+                <input type="radio" name="q4" value="Not familiar at all">&emsp;Not familiar at all<br><br>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="child1" style="height:210px;">
+                <label>Do you think the search for extraterrestrial life should be a priority for space agencies? Why or why not?</label><br><br><br>
+                <input type="radio" name="q5" value="Yes, it's important for scientific exploration">&emsp;Yes, it's important for scientific exploration<br>
+                <input type="radio" name="q5" value="No, there are more pressing priorities">&emsp;No, there are more pressing priorities<br>
+                <input type="radio" name="q5" value="Maybe, depending on potential benefits">&emsp;Maybe, depending on potential benefits<br>
+                <input type="radio" name="q5" value="Not sure/undecided">&emsp;Not sure/undecided<br><br>
+            </div>
+
+            <!-- Question 6 -->
+            <div class="child1" style="height:250px;">
+                <label>Are you aware of any ongoing international collaborations or partnerships in space exploration? If yes, please provide examples.</label><br><br><br>
+                <input type="radio" name="q6" value="Yes, examples:">&emsp;Yes, examples: <br>
+                <textarea name="q6_other"></textarea><br>
+                <input type="radio" name="q6" value="No, not aware of any">&emsp;No, not aware of any<br>
+                <input type="radio" name="q6" value="Have heard of but can't recall details">&emsp;Have heard of but can't recall details<br>
+                <input type="radio" name="q6" value="Not sure/uncertain">&emsp;Not sure/uncertain<br><br>
+            </div>
+        </div>
+
+        <!-- ---------------------Buttons-------------------- -->
+        <div class="btns">
+            <input type="reset" value="Reset" id="rstBtn">
+            <input type="submit" value="Next" id="nxtBtn">
+        </div>
+    </form>
+    <script>
+        document.getElementById('redirectForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the form from submitting normally
+            
+            // Redirect to another HTML page
+            window.location.href = 'page3.html'; // Replace with your desired HTML page's URL
+        });
+    </script>
+</body>
+</html>

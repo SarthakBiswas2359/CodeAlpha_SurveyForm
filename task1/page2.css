@@ -1,0 +1,157 @@
+body {
+  background-color: #f0ebf8;
+  /* background-image: url("https://img.freepik.com/free-photo/tropical-beach_74190-188.jpg?w=2000"); */
+  font-family: "Product Sans", sans-serif;
+
+}
+
+.parent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.child1 {
+  width: 90%;
+  background: rgba(255, 255, 255, 0.64);
+  padding: 20px;
+  font-family: sans-serif;
+  margin: 15px;
+  border-top: 8px solid purple;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  animation: topline ease-out 5s infinite;
+}
+
+/* Adjust styles for smaller screens */
+@media (max-width: 768px) {
+  .child1 {
+    width: 95%;
+    padding: 15px;
+    font-size: 14px;
+    /* Adjust font size for smaller screens */
+  }
+}
+
+/* Adjust styles for even smaller screens */
+@media (max-width: 480px) {
+  .child1 {
+    width: 100%;
+    padding: 10px;
+    font-size: 12px;
+    /* Adjust font size for even smaller screens */
+  }
+}
+
+
+h1 {
+  color: black;
+  text-align: center;
+  font-family: "Product Sans", sans-serif;
+  text-transform: uppercase;
+}
+
+h1::first-letter {
+  font-size: 70px;
+}
+
+.child1 input {
+  border: none;
+  border-bottom: 1px solid black;
+  /* width: 20em; */
+  background-color: transparent;
+}
+
+label {
+  font-family: "Product Sans", sans-serif;
+  font-size: 25px;
+
+}
+
+.btns {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+#nxtBtn {
+  margin: 30px;
+  padding: 10px;
+  width: 80px;
+  border: none;
+  background-color: #800080;
+  color: white;
+  border-radius: 5px;
+  transition: 1s
+}
+
+#nxtBtn:hover{
+  background-image: url(smoke.gif);
+  background-size: cover;
+  transform: scale(1.1);
+
+}
+
+#rstBtn {
+  margin: 30px;
+  padding: 10px;
+  width: 80px;
+  border: none;
+  background-color: #800080;
+  color: white;
+  border-radius: 5px;
+}
+
+.child1 input {
+  border: none;
+  border-bottom: 1px solid black;
+  font-size: 20px;
+  outline: none;
+}
+
+.proff {
+  font-size: 10px;
+
+}
+
+textarea {
+  outline: none;
+  border-style: none;
+  overflow: auto;
+  border-bottom: 1px solid black;
+  background-color: transparent;
+  margin-left: 90px;
+  margin-bottom: 5px;
+  max-height: 50px;
+  max-width: 350px;
+  width: 280px;
+  color: gray;
+}
+
+@keyframes topline {
+  0% {
+    border-top: 8px solid #f0ebf8;
+
+  }
+
+  25% {
+    border-top: 8px solid purple;
+  }
+
+  50% {
+    border-top: 8px solid #f0ebf8;
+  }
+
+  75% {
+    border-top: 8px solid purple;
+  }
+
+  100% {
+    border-top: 8px solid #f0ebf8;
+
+  }
+
+
+}

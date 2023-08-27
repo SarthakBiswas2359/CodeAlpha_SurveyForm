@@ -1,0 +1,88 @@
+<!-- <?php
+session_start();
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $_SESSION['q7'] = $_POST['q7'];
+    $_SESSION['q8'] = $_POST['q8'];
+    $_SESSION['q9'] = $_POST['q9'];
+    $_SESSION['q10'] = $_POST['q10'];
+    
+    //header("Location: thank_you.php"); // Redirect to thank you page
+    exit();
+}
+?> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gravitate Opinions</title>
+    <link href="https://fonts.cdnfonts.com/css/product-sans" rel="stylesheet">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/6432/6432222.png" type="image/png">
+    <link rel="stylesheet" href="page3.css">
+</head>
+<body>
+    <h1>Gravitate Opinions</h1>
+    <form method="POST" id="redirectForm">
+
+        <div class="parent">
+            <!-- Question 7 -->
+            <div class="child1" style="height:170px;">
+                <label>What potential benefits do you believe space exploration and research can bring to life on Earth?</label><br><br><br>
+                <input type="radio" name="q7" value="Technological advancements">&emsp;Technological advancements<br>
+                <input type="radio" name="q7" value="Resource mining from celestial bodies">&emsp;Resource mining from celestial bodies<br>
+                <input type="radio" name="q7" value="Insight into Earth's climate">&emsp;Insight into Earth's climate<br>
+                <input type="radio" name="q7" value="Not sure/uncertain">&emsp;Not sure/uncertain<br><br>
+            </div>
+
+            <!-- Question 8 -->
+            <div class="child1" style="height:210px;">
+                <label>How important is it, in your opinion, to continue sending rovers and probes to explore other planets and celestial bodies?</label><br><br><br>
+                <input type="radio" name="q8" value="Very important for scientific discovery">&emsp;Very important for scientific discovery<br>
+                <input type="radio" name="q8" value="Somewhat important">&emsp;Somewhat important<br>
+                <input type="radio" name="q8" value="Not very important">&emsp;Not very important<br>
+                <input type="radio" name="q8" value="Unsure/I don't know">&emsp;Unsure/I don't know<br><br>
+            </div>
+
+            <!-- Question 9 -->
+            <div class="child1" style="height: 220px;">
+                <div class="rad1">
+                    <label>Are you concerned about the environmental impact of space exploration, such as space debris and its potential consequences?</label><br><br><br>
+                    <input type="radio" name="q9" value="Very concerned">&emsp;Very concerned<br>
+                    <input type="radio" name="q9" value="Somewhat concerned">&emsp;Somewhat concerned<br>
+                    <input type="radio" name="q9" value="Not very concerned">&emsp;Not very concerned<br>
+                    <input type="radio" name="q9" value="Not at all concerned">&emsp;Not at all concerned<br><br>
+                </div>
+            </div>
+
+            <!-- Question 10 -->
+            <div class="child1" style="height:210px;">
+                <label>What technological advancements do you believe are necessary to make long-duration space travel feasible for humans?</label><br><br><br>
+                <input type="radio" name="q10" value="Advanced propulsion systems">&emsp;Advanced propulsion systems<br>
+                <input type="radio" name="q10" value="Sustainable life support systems">&emsp;Sustainable life support systems<br>
+                <input type="radio" name="q10" value="Artificial gravity generation">&emsp;Artificial gravity generation<br>
+                <input type="radio" name="q10" value="Unsure/I don't know">&emsp;Unsure/I don't know<br><br>
+            </div>
+        </div>
+
+        <!-- ---------------------Buttons-------------------- -->
+        <div class="btns">
+            <input type="reset" value="Reset" id="rstBtn">
+            <input type="submit" value="Submit" id="nxtBtn">
+        </div>
+    </form>
+    <script>
+        document.getElementById('redirectForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the form from submitting normally
+            
+            // Redirect to another HTML page
+            window.location.href = 'submit.html'; // Replace with your desired HTML page's URL
+        });
+
+        // let click = document.getElementById("nxtBtn");
+        // click.addEventListener('click',() =>{
+        //     alert("Are you sure?");
+
+        // } )
+    </script>
+</body>
+</html>

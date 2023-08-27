@@ -1,0 +1,59 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="page1.css">
+    <link href="https://fonts.cdnfonts.com/css/product-sans" rel="stylesheet">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/6432/6432222.png" type="image/png">
+    <title>Gravitate Opinions </title>
+</head>
+
+<body>
+    <h1>Gravitate Opinions</h1>
+    <form method="POST" id="redirectForm">
+
+        <div class="parent">
+            <div class="child1">
+                <label for="name">Name</label><br><br>
+                <input type="text" id="name" name="name"><br><br>
+            </div>
+
+            <div class="child1">
+                <label for="age">Age</label><br><br>
+                <input type="number" id="age" name="age"><br><br>
+            </div>
+
+            <div class="child1" style="height: 230px;">
+                <label for="profession">Profession</label><br><br>
+                <input type="radio" name="profession" value="College Student" id="proff_college">College Student<br>
+                <input type="radio" name="profession" value="Professor" id="proff_prof">Professor<br>
+                <input type="radio" name="profession" value="Scientist" id="proff_sci">Scientist<br>
+                <input type="radio" name="profession" value="Graduate" id="proff_grad">Graduate<br>
+                <input type="radio" name="profession" value="Engineer" id="proff_eng">Engineer<br>
+                <input type="radio" name="profession" value="Astronaut" id="proff_astro">Astronaut<br>
+                <input type="radio" name="profession" value="Other" id="proff_other">Other : <br>
+                <textarea name="other_profession"></textarea>
+            </div>
+        </div>
+
+        <!-- ---------------------Buttons-------------------- -->
+        <div class="btns">
+            <input type="reset" value="Reset" id="rstBtn">
+            <input type="submit" value="Next" id="nextBtn">
+        </div>
+    </form>
+    <script>
+        document.getElementById('redirectForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the form from submitting normally
+            
+            // Redirect to another HTML page
+            window.location.href = 'page2.html'; // Replace with your desired HTML page's URL
+        });
+    </script>
+</body>
+
+</html>
